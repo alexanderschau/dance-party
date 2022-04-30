@@ -28,7 +28,7 @@
 <style>
   .bg {
     transform: translateY(0);
-    animation: background-shift 30s linear infinite forwards;
+    animation: background-shift 20s linear infinite forwards;
   }
   @keyframes background-shift {
     to {
