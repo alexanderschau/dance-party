@@ -1,13 +1,79 @@
 ---
+import RowAnimation from "../components/RowAnimation.svelte";
 
+const row1 = [
+  "l3V0lsGtTMSB5YNgc",
+  "XCZc9fVDPFiVy",
+  "l0MYPzSLarruwa4Io",
+  "WVDydsqYteU5aLlliQ",
+  "Um27tTsg0mSdO",
+  "XCZc9fVDPFiVy",
+  "hk6ztwd173q8M",
+  "YTbZzCkRQCEJa",
+  "7IiKzMst8DNU4",
+  "l0amJzVHIAfl7jMDos",
+  "13hxeOYjoTWtK8",
+  "l3q2zbskZp2j8wniE",
+];
+const row2 = [
+  "OoPijfuAvOtfa",
+  "cm6bHfo16WBokQuFqa",
+  "6yG6GvvcN1Gr6",
+  "3o7TKHrkdOyBPbgAmc",
+  "iPTTjEt19igne",
+  "iiGBtyGm5R960",
+  "LUhUvH4BsfE9USnlPd",
+  "WP1PJnXWQN692",
+  "ejJclNX60XyEo555wW",
+  "ahDOY7XwxjNXW",
+  "3rgXBQIDHkFNniTNRu",
+];
+const row3 = [
+  "D2GnhHDSGPPtg3ns5c",
+  "1DRiKuxXyuQ0w",
+  "3kHBUxaBZSSk4x3j3x",
+  "GPuVXyAmkMco0",
+  "HPLSCMSyVgOR8iWCz0",
+  "unRa3ffljnuec",
+  "VbE3VHdghGT1QRVthu",
+  "fM3xoVGOpR90Q",
+  "7JKo5eMDBxeErK38Fv",
+  "l0MYt5jPR6QX5pnqM",
+  "XWKrUYz1N5J7i",
+  "H7rnzWSwsActfQ4Avn",
+  "q0KrtRcr10Bhu",
+];
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro</title>
+  </head>
+  <body class="overflow-hidden">
+    <div class="bg">
+      <RowAnimation imageUrls={row1} />
+      <RowAnimation imageUrls={row2} />
+      <RowAnimation imageUrls={row3} />
+    </div>
+    <div class="bg">
+      <RowAnimation imageUrls={row1} />
+      <RowAnimation imageUrls={row2} />
+      <RowAnimation imageUrls={row3} />
+    </div>
+  </body>
 </html>
+
+<style>
+  .bg {
+    /*transform: translateX(-100%);*/
+    transform: translateY(0);
+    animation: background-shift 20s linear infinite forwards;
+  }
+  @keyframes background-shift {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+</style>
